@@ -4,20 +4,18 @@ module.exports = {
   overrides: [
     {
       files: '*.vue',
-      extends: [
-        'plugin:vue/recommended',
-        'prettier/vue',
-      ],
+      extends: ['plugin:vue/recommended', 'prettier/vue'],
       rules: {
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          { argsIgnorePattern: '^_+$' },
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+$' }],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            js: 'never',
+            vue: 'never',
+          },
         ],
-        'import/extensions': ['error', 'ignorePackages', {
-          js: 'never',
-          vue: 'never',
-        }],
       },
     },
   ],
-}
+};

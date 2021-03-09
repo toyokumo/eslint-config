@@ -14,15 +14,16 @@ module.exports = {
         'prettier/vue',
       ],
       rules: {
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          { argsIgnorePattern: '^_+$' },
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+$' }],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            vue: 'always',
+          },
         ],
-        'import/extensions': ['error', 'ignorePackages', {
-          ts: 'never',
-          vue: 'always',
-        }],
       },
     },
   ],
-}
+};

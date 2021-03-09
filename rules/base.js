@@ -12,10 +12,7 @@ function noUnusedVars(rule) {
 }
 
 module.exports = {
-  extends: [
-    'airbnb-base',
-    'prettier',
-  ],
+  extends: ['airbnb-base', 'prettier'],
   env: {
     browser: true,
     es6: true,
@@ -33,4 +30,4 @@ module.exports = {
     // (_, x) => x
     'no-unused-vars': noUnusedVars(airbnbRulesVars.rules['no-unused-vars']),
   },
-}
+};

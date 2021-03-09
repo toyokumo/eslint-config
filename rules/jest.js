@@ -3,4 +3,4 @@ module.exports = {
     'jest/globals': true,
   },
   plugins: ['jest'],
-}
+};

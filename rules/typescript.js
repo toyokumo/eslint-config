@@ -8,15 +8,16 @@ module.exports = {
       files: '*.ts',
       extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
       rules: {
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          { argsIgnorePattern: '^_+$' },
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+$' }],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            vue: 'always',
+          },
         ],
-        'import/extensions': ['error', 'ignorePackages', {
-          ts: 'never',
-          vue: 'always',
-        }],
       },
     },
   ],
-}
+};
