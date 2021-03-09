@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/toyokumo/eslint-config/issues"
   },
-  "homepage": "https://github.com/toyokumo/eslint-config#readme"
+  "homepage": "https://github.com/toyokumo/eslint-config#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.1.9",
+    "eslint-plugin-vue": "^7.7.0"
+  }
 }
