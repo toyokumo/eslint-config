@@ -1,4 +1,5 @@
 # eslint-config
+![Test](https://github.com/toyokumo/eslint-config/workflows/Test/badge.svg?branch=main)
 
 A ESLint rule set for Toyokumo.
 
