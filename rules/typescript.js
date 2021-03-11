@@ -1,13 +1,12 @@
 module.exports = {
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-  },
-  plugins: ['@typescript-eslint'],
   overrides: [
     {
       files: '*.ts',
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
+      extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
       rules: {
+        'no-unused-vars': ['off'],
         '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+$' }],
         'import/extensions': [
           'error',
