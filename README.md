@@ -1,4 +1,5 @@
 # eslint-config
+[![npm version](https://badge.fury.io/js/%40toyokumo%2Feslint-config.svg)](https://badge.fury.io/js/%40toyokumo%2Feslint-config)
 ![Test](https://github.com/toyokumo/eslint-config/workflows/Test/badge.svg?branch=main)
 
 A ESLint rule set for Toyokumo.

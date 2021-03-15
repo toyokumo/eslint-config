@@ -30,6 +30,12 @@
     "url": "https://github.com/toyokumo/eslint-config/issues"
   },
   "homepage": "https://github.com/toyokumo/eslint-config#readme",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "rules"
+  ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.17.0",
     "@typescript-eslint/parser": "^4.17.0",
@@ -45,5 +51,9 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "standard-version": "^9.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1"
   }
 }
