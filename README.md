@@ -12,7 +12,7 @@ A ESLint rule set for Toyokumo.
 # Based on [airbnb](https://github.com/airbnb/javascript)
 
 - Additional settings are not overwritten, merge into eslint-config-airbnb-base.
-- We don't agree with the airbnb rule, we don't follow it.
+- If we disagree with the rules of airbnb, we will not follow them.
 - This policy might be changed.
 
 ## Differences
@@ -28,6 +28,15 @@ no-unused-vars rule is allowed for strings matched `^_+$`.
 ```javascript
 // ok
 const f = (_, x) => x;
+```
+
+named export is recommended over default export.
+```javascript
+// bad
+export default function foo() {}
+
+// good
+export function foo() {}
 ```
 
 # Use prettier for code format
