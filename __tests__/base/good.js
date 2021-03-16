@@ -5,3 +5,5 @@ xs.forEach((x) => {
 
 const f = (_, x) => x;
 f(1, 2);
+
+export const x = 10;

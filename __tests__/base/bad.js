@@ -1,1 +1,3 @@
-// todo: Add bad code tests
+// todo: Add bad code tests more.
+
+export default function foo() {};
