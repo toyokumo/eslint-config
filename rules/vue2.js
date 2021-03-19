@@ -12,7 +12,8 @@ module.exports = {
           'ignorePackages',
           {
             js: 'never',
-            vue: 'never',
+            ts: 'never',
+            vue: 'always',
           },
         ],
       },
