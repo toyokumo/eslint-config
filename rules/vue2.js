@@ -13,7 +13,7 @@ module.exports = {
           {
             js: 'never',
             ts: 'never',
-            vue: 'always',
+            vue: 'never',
           },
         ],
       },
