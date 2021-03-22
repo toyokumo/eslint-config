@@ -22,5 +22,12 @@ module.exports = {
         ],
       },
     },
+    {
+      files: '*.ts',
+      rules: {
+        // for vuex
+        'no-shadow': ['error', { allow: ['state', 'getters'] }],
+      },
+    },
   ],
 };
