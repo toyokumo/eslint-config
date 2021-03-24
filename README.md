@@ -42,6 +42,7 @@ export function foo() {}
 # Use prettier for code format
 
 - All rules provided by toyokumo/eslint-config assume the use of prettier.
+  - Install and use [@toyokumo/prettier-config](https://github.com/toyokumo/prettier-config)
 - Use prettier-config-plugin to avoid lint errors where it overlaps with prettier format rules.
   - If we find a red squiggly line, we will want to fix it, but we don't have to manually fix what we can fix by formatting
 - For the lint + format method, refer to the method of this repository.
