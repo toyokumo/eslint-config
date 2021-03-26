@@ -5,6 +5,7 @@ const lintFilesWithConfigFile = async (configFile, targetFiles) => {
     overrideConfigFile: configFile,
     useEslintrc: false,
     extensions: ['.js'],
+    ignore: false,
   });
   return eslint.lintFiles(targetFiles);
 };
