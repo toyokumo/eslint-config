@@ -27,7 +27,8 @@ module.exports = {
       files: '*.ts',
       rules: {
         // for vuex
-        'no-shadow': ['error', { allow: ['state', 'getters'] }],
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error', { allow: ['state', 'getters'] }],
       },
     },
   ],
