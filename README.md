@@ -54,7 +54,7 @@ export function foo() {}
   - Base rule set. At least use this.
 - `@toyokumo/eslint-config/rules/typescript.js`
   - Support of typescript for `*.ts` files.
-- `@toyokumo/eslint-config/rules/vue2.js`  
+- `@toyokumo/eslint-config/rules/vue2.js`
   - Support of vue2 for `*.vue` files.
 - `@toyokumo/eslint-config/rules/vue2-typescript.js`
   - Support of vue2 with typescript in script tag for `*.vue` files.
@@ -62,6 +62,12 @@ export function foo() {}
   - Support of jest.
 
 # Usage
+
+```bash
+npm i --save-dev @toyokumo/eslint-config @toyokumo/prettier-config prettier
+# or
+yarn add --dev @toyokumo/eslint-config @toyokumo/prettier-config prettier
+```
 
 We just set the ideal rule set, so we can overwrite or ignore the rule depending on the project situation.
 
