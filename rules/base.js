@@ -30,5 +30,11 @@ module.exports = {
     // Allow following code
     // (_, x) => x
     'no-unused-vars': noUnusedVars(airbnbRulesVars.rules['no-unused-vars']),
+    /*
+    Resolve these conflicted rules
+      https://github.com/airbnb/javascript/blob/1eadb93e377da1e56c3f91f26610e5d0a00738a9/packages/eslint-config-airbnb-base/rules/best-practices.js#L26
+      https://github.com/prettier/eslint-config-prettier#curly
+    */
+    curly: ['error', 'all'],
   },
 };
