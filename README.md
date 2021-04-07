@@ -64,10 +64,33 @@ export function foo() {}
 # Usage
 
 ```bash
-npm i --save-dev @toyokumo/eslint-config @toyokumo/prettier-config prettier
+npm i --save-dev @toyokumo/eslint-config @toyokumo/prettier-config prettier npm-run-all
 # or
-yarn add --dev @toyokumo/eslint-config @toyokumo/prettier-config prettier
+yarn add --dev @toyokumo/eslint-config @toyokumo/prettier-config prettier npm-run-all
 ```
+
+## Setup npm scripts
+
+We **must use prettier** for code format when using @toyokumo/eslint-config.
+
+We are taking this strategy for code format - `eslint --fix` -> `prettier --write`
+
+An Example of npm scripts to achieve this strategy.
+
+```json
+{
+  "scripts": {
+    "format": "run-s \"format:eslint -- {1}\" \"format:prettier -- {1}\" --",
+    "format:eslint": "eslint --fix",
+    "format:prettier": "prettier --write",
+    "format-all": "npm run format \"./**/*.js\"",
+    "format-all:eslint": "eslint --fix \"./**/*.js\"",
+    "format-all:prettier": "prettier --write \"./**/*.js\""
+  }
+}
+```
+
+## Setup eslintrc
 
 We just set the ideal rule set, so we can overwrite or ignore the rule depending on the project situation.
 
@@ -79,6 +102,17 @@ module.exports = {
     '@toyokumo/eslint-config/rules/vue2-typescript.js',
     '@toyokumo/eslint-config/rules/jest.js',
   ],
+  // Add import/resolver suitable for project build tool.
+  settings: {
+    'import/resolver': {
+      node: {
+        // ...
+      },
+      webpack: {
+        // ...
+      }
+    }
+  },
   rules: {
     // too many default export in project.
     'import/no-default-export': 'off',
