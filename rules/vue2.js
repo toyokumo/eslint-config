@@ -19,10 +19,18 @@ module.exports = {
       },
     },
     {
-      files: ['*.js', '*.ts'],
+      files: '*.js',
       rules: {
         // for vuex
         'no-shadow': ['error', { allow: ['state', 'getters'] }],
+      },
+    },
+    {
+      files: '*.ts',
+      rules: {
+        // for vuex
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error', { allow: ['state', 'getters'] }],
       },
     },
   ],
