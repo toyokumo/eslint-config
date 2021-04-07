@@ -1,0 +1,1 @@
+export const plus = (x: number, y: number): number => x + y;
