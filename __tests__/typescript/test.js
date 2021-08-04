@@ -8,7 +8,7 @@ const goodTsx = path.resolve(__dirname, 'good.tsx');
 test('typescript', async () => {
   const lintResult = await lintFilesWithConfigFile(config, [goodTs, goodTsx]);
 
-  console.log(JSON.stringify(lintResult, null, 2))
+  // console.log(JSON.stringify(lintResult, null, 2))
 
   expect(lintResult[0].errorCount).toBe(0);
   expect(lintResult[0].warningCount).toBe(0);
