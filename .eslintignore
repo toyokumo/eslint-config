@@ -1,2 +1,2 @@
-__tests__/**/good.js
-__tests__/**/bad.js
+tests/**/good.js
+tests/**/bad.js
