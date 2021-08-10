@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.9](https://github.com/toyokumo/eslint-config/compare/v1.0.8...v1.0.9) (2021-08-04)
 
-
 ### Bug Fixes
 
-* comment out console for debug ([ad203d1](https://github.com/toyokumo/eslint-config/commit/ad203d18e97b5ba579744888e1718a688ece06aa))
+- comment out console for debug ([ad203d1](https://github.com/toyokumo/eslint-config/commit/ad203d18e97b5ba579744888e1718a688ece06aa))
 
 ### [1.0.8](https://github.com/toyokumo/eslint-config/compare/v1.0.7...v1.0.8) (2021-04-08)
 

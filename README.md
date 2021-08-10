@@ -1,4 +1,5 @@
 # eslint-config
+
 [![npm version](https://badge.fury.io/js/%40toyokumo%2Feslint-config.svg)](https://badge.fury.io/js/%40toyokumo%2Feslint-config)
 ![Test](https://github.com/toyokumo/eslint-config/workflows/Test/badge.svg?branch=main)
 
@@ -18,19 +19,24 @@ A ESLint rule set for Toyokumo.
 ## Differences
 
 no-param-reassign rule is allowed for props.
+
 ```javascript
 const xs = [{ a: 1 }, { a: 2 }];
 // ok
-xs.forEach((x) => { x.a = 0 });
+xs.forEach((x) => {
+  x.a = 0;
+});
 ```
 
 no-unused-vars rule is allowed for strings matched `^_+$`.
+
 ```javascript
 // ok
 const f = (_, x) => x;
 ```
 
 named export is recommended over default export.
+
 ```javascript
 // bad
 export default function foo() {}
@@ -97,39 +103,39 @@ We just set the ideal rule set, so we can overwrite or ignore the rule depending
 ```javascript
 module.exports = {
   extends: [
-    '@toyokumo/eslint-config',
-    '@toyokumo/eslint-config/rules/typescript.js',
-    '@toyokumo/eslint-config/rules/vue2-typescript.js',
-    '@toyokumo/eslint-config/rules/jest.js',
+    "@toyokumo/eslint-config",
+    "@toyokumo/eslint-config/rules/typescript.js",
+    "@toyokumo/eslint-config/rules/vue2-typescript.js",
+    "@toyokumo/eslint-config/rules/jest.js",
   ],
   // Add import/resolver suitable for project build tool.
   settings: {
-    'import/resolver': {
+    "import/resolver": {
       node: {
         // ...
       },
       webpack: {
         // ...
-      }
-    }
+      },
+    },
   },
   rules: {
     // too many default export in project.
-    'import/no-default-export': 'off',
+    "import/no-default-export": "off",
   },
   overrides: [
     {
-      files: '*.ts',
+      files: "*.ts",
       rules: {
         // too many any in project.
-        '@typescript-eslint/no-explicit-any': 'off',
+        "@typescript-eslint/no-explicit-any": "off",
       },
     },
     {
-      files: '*.vue',
+      files: "*.vue",
       rules: {
         // too many any in project.
-        '@typescript-eslint/no-explicit-any': 'off',
+        "@typescript-eslint/no-explicit-any": "off",
       },
     },
   ],

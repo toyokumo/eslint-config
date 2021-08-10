@@ -1,7 +1,5 @@
 <template>
-  <div>
-    good
-  </div>
+  <div>good</div>
 </template>
 
 <script>
