@@ -10,7 +10,7 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/recommended', 'prettier'],
       rules: {
         'no-unused-vars': ['off'],
-        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_+$' }],
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
         'import/no-default-export': 'off',
         'import/extensions': [
           'error',
