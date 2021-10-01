@@ -58,6 +58,8 @@ export function foo() {}
 
 - `@toyokumo/eslint-config`
   - Base rule set. At least use this.
+- `@toyokumo/eslint-config/rules/react.js`
+  - Support of react for `*.jsx`, `*.tsx` files. This ruleset is intended to be used with `@toyokumo/eslint-config/rules/typescript.js`.
 - `@toyokumo/eslint-config/rules/typescript.js`
   - Support of typescript for `*.ts` files.
 - `@toyokumo/eslint-config/rules/vue2.js`
