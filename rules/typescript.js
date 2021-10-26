@@ -8,6 +8,8 @@ module.exports = {
       rules: {
         'no-unused-vars': ['off'],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+        // The benefits of type inference for consistency outweigh the annotation of return type in special cases
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
         'import/extensions': [
           'error',
           'ignorePackages',
