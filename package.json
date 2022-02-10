@@ -2,7 +2,7 @@
   "name": "@toyokumo/eslint-config",
   "version": "1.0.14",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "description": "eslint rule set for Toyokumo.",
   "main": "index.js",
