@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'Good',
+  name: 'GoodComponent',
 };
 </script>
