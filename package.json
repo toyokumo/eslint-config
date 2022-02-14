@@ -15,7 +15,8 @@
     "format:prettier": "prettier --write",
     "format-all": "npm run format \"./**/*.js\"",
     "format-all:eslint": "eslint --fix \"./**/*.js\"",
-    "format-all:prettier": "prettier --write \"./**/*.js\""
+    "format-all:prettier": "prettier --write \"./**/*.js\"",
+    "format:check": "prettier --check \"./**/*.js\""
   },
   "repository": {
     "type": "git",
