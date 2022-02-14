@@ -49,7 +49,7 @@
     "eslint-plugin-vue": "^8.4.1"
   },
   "devDependencies": {
-    "@toyokumo/prettier-config": "^1.0.1",
+    "@toyokumo/prettier-config": "^1.0.2",
     "enhanced-resolve": "^5.9.0",
     "eslint": "^8.8.0",
     "jest": "^27.5.1",
@@ -58,7 +58,7 @@
     "standard-version": "^9.3.2"
   },
   "peerDependencies": {
-    "@toyokumo/prettier-config": "^1.0.1",
+    "@toyokumo/prettier-config": "^1.0.2",
     "eslint": "^8.8.0"
   }
 }
