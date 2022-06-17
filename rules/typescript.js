@@ -19,6 +19,12 @@ module.exports = {
             tsx: 'never',
           },
         ],
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+          },
+        ],
       },
     },
   ],
