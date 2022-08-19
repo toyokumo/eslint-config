@@ -12,4 +12,5 @@ test('base', async () => {
   expect(lintResult[0].warningCount).toBe(0);
 
   expect(lintResult[1].warningCount).toBe(1);
+  expect(lintResult[1].errorCount).toBe(3);
 });

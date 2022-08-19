@@ -7,3 +7,12 @@ const f = (_, x) => x;
 f(1, 2);
 
 export const x = 10;
+
+const underscore = () => {
+  const __typename = 'test';
+  const test = {
+    __typename: 'test',
+  };
+  return [__typename, test.__typename];
+};
+underscore();
