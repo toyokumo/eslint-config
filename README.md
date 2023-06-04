@@ -68,6 +68,8 @@ export function foo() {}
   - Support of vue2 with typescript in script tag for `*.vue` files.
 - `@toyokumo/eslint-config/rules/jest.js`
   - Support of jest.
+- `@toyokumo/eslint-config/rules/tailwindcss.js`
+  - Support of tailwindcss for `*.ts`, `*.tsx` files.
 
 # Usage
 
