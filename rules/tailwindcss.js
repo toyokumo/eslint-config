@@ -1,9 +1,8 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.vue'],
       plugins: ['tailwindcss'],
-      parser: '@typescript-eslint/parser',
       extends: ['plugin:tailwindcss/recommended'],
     },
   ],

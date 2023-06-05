@@ -69,7 +69,7 @@ export function foo() {}
 - `@toyokumo/eslint-config/rules/jest.js`
   - Support of jest.
 - `@toyokumo/eslint-config/rules/tailwindcss.js`
-  - Support of tailwindcss for `*.ts`, `*.tsx` files.
+  - Support of tailwindcss for `*.ts`, `*.tsx`, `*.vue` files.
 
 # Usage
 
