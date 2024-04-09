@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest test.js",
-    "lint": "eslint --max-warnings=0 \"./**/*.js\"",
+    "lint": "eslint --max-warnings=0 \"**/*.js\"",
     "release": "standard-version",
     "format": "run-s \"format:eslint -- {1}\" \"format:prettier -- {1}\" --",
     "format:eslint": "eslint --fix",
@@ -50,7 +50,8 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.15.1"
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "globals": "^15.0.0"
   },
   "devDependencies": {
     "@toyokumo/prettier-config": "^1.1.1",

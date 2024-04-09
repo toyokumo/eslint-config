@@ -1,3 +1,7 @@
+const javascript = require('./rules/javascript');
+
 module.exports = {
-  extends: ['./rules/base.js'],
+  configs: {
+    js: javascript,
+  },
 };
