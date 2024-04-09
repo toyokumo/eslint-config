@@ -11,5 +11,6 @@ module.exports = [
         ...globals.jest,
       },
     },
+    ignores: ['tests/**/good.js', 'tests/**/bad.js']
   },
 ];
