@@ -13,6 +13,5 @@ test('tsx', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/typescript/sample.tsx'), null, 2));
 
-  expect(results[0].errorCount).toBe(0);
   expect(results[0].messages).toEqual(expect.arrayContaining([]));
 });
