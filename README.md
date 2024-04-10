@@ -10,41 +10,6 @@ A ESLint rule set for Toyokumo.
 - Standardization of coding style.
 - Installation and setting support for ESLint.
 
-# Based on [airbnb](https://github.com/airbnb/javascript)
-
-- Additional settings are not overwritten, merge into eslint-config-airbnb-base.
-- If we disagree with the rules of airbnb, we will not follow them.
-- This policy might be changed.
-
-## Differences
-
-no-param-reassign rule is allowed for props.
-
-```javascript
-const xs = [{ a: 1 }, { a: 2 }];
-// ok
-xs.forEach((x) => {
-  x.a = 0;
-});
-```
-
-no-unused-vars rule is allowed for strings matched `^_+$`.
-
-```javascript
-// ok
-const f = (_, x) => x;
-```
-
-named export is recommended over default export.
-
-```javascript
-// bad
-export default function foo() {}
-
-// good
-export function foo() {}
-```
-
 # Use prettier for code format
 
 - All rules provided by toyokumo/eslint-config assume the use of prettier.
@@ -54,29 +19,12 @@ export function foo() {}
 - For the lint + format method, refer to the method of this repository.
 - This policy might be changed.
 
-# Supporting rule sets
-
-- `@toyokumo/eslint-config`
-  - Base rule set. At least use this.
-- `@toyokumo/eslint-config/rules/react.js`
-  - Support of react for `*.jsx`, `*.tsx` files. This ruleset is intended to be used with `@toyokumo/eslint-config/rules/typescript.js`.
-- `@toyokumo/eslint-config/rules/typescript.js`
-  - Support of typescript for `*.ts` files.
-- `@toyokumo/eslint-config/rules/vue2.js`
-  - Support of vue2 for `*.vue` files.
-- `@toyokumo/eslint-config/rules/vue2-typescript.js`
-  - Support of vue2 with typescript in script tag for `*.vue` files.
-- `@toyokumo/eslint-config/rules/jest.js`
-  - Support of jest.
-- `@toyokumo/eslint-config/rules/tailwindcss.js`
-  - Support of tailwindcss for `*.ts`, `*.tsx`, `*.vue` files.
-
 # Usage
 
 ```bash
-npm i --save-dev @toyokumo/eslint-config @toyokumo/prettier-config prettier npm-run-all
+npm i --save-dev @toyokumo/eslint-config eslint @toyokumo/prettier-config prettier npm-run-all
 # or
-yarn add --dev @toyokumo/eslint-config @toyokumo/prettier-config prettier npm-run-all
+yarn add --dev @toyokumo/eslint-config eslint @toyokumo/prettier-config prettier npm-run-all
 ```
 
 ## Setup npm scripts
@@ -93,55 +41,122 @@ An Example of npm scripts to achieve this strategy.
     "format": "run-s \"format:eslint -- {1}\" \"format:prettier -- {1}\" --",
     "format:eslint": "eslint --fix",
     "format:prettier": "prettier --write",
-    "format-all": "npm run format \"./**/*.js\"",
-    "format-all:eslint": "eslint --fix \"./**/*.js\"",
-    "format-all:prettier": "prettier --write \"./**/*.js\""
+    "format-all": "npm run format \"./**/*.{js,ts,tsx}\"",
+    "format-all:eslint": "eslint --fix \"./**/*.{js,ts,tsx}\"",
+    "format-all:prettier": "prettier --write \"./**/*.{js,ts,tsx}\""
   }
 }
 ```
 
-## Setup eslintrc
+## Configuration object
+
+```javascript
+const toyokumoEslint = require('@toyokumo/eslint-config');
+/* 
+Imported toyokumoEslint is a object of ESLint configurations.
+
+{
+  // config is a config helper function inspired by typescript-eslint.
+  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-eslint/src/config-helper.ts
+  config,
+  // configs is a object of ESLint configurations.
+  configs: {
+    js, // Linter.FlatConfig[]
+    ts, // Linter.FlatConfig[]
+    react, // Linter.FlatConfig
+    next, // Linter.FlatConfig
+    tailwindcss, // Linter.FlatConfig[]
+    jest, // Linter.FlatConfig[]
+    prettier, // Linter.FlatConfig
+  },
+}
+
+ */
+```
+
+## Setup eslint.config.js
 
 We just set the ideal rule set, so we can overwrite or ignore the rule depending on the project situation.
 
 ```javascript
-module.exports = {
-  extends: [
-    "@toyokumo/eslint-config",
-    "@toyokumo/eslint-config/rules/typescript.js",
-    "@toyokumo/eslint-config/rules/vue2-typescript.js",
-    "@toyokumo/eslint-config/rules/jest.js",
-  ],
-  // Add import/resolver suitable for project build tool.
-  settings: {
-    "import/resolver": {
-      node: {
-        // ...
-      },
-      webpack: {
-        // ...
-      },
-    },
+// Most simple example
+const toyokumoEslint = require('@toyokumo/eslint-config');
+
+module.exports = [
+  ...toyokumoEsLint.configs.js,
+  ...toyokumoEsLint.configs.ts,
+  toyokumoEsLint.configs.react,
+  toyokumoEsLint.configs.next,
+  ...toyokumoEsLint.configs.tailwindcss,
+  toyokumoEsLint.configs.prettier,
+  {
+    rules: {
+      // Overwrite my rule
+    }
   },
-  rules: {
-    // too many default export in project.
-    "import/no-default-export": "off",
-  },
-  overrides: [
-    {
-      files: "*.ts",
-      rules: {
-        // too many any in project.
-        "@typescript-eslint/no-explicit-any": "off",
-      },
-    },
-    {
-      files: "*.vue",
-      rules: {
-        // too many any in project.
-        "@typescript-eslint/no-explicit-any": "off",
-      },
-    },
-  ],
-};
+];
+
+// Multi modules
+module.exports = [
+  ...toyokumoEslint.config({
+    files: ['packages/next/**/*.ts', 'packages/next/**/*.tsx'],
+    extends: [
+      ...toyokumoEsLint.configs.ts,
+      toyokumoEsLint.configs.react,
+      toyokumoEsLint.configs.next,
+      ...toyokumoEsLint.configs.tailwindcss,
+      toyokumoEsLint.configs.prettier,
+      {
+        languageOptions: {
+          parserOptions: {
+            project: 'packages/next/tsconfig.json',
+          },
+        },
+        settings: {
+          'import/resolver': {
+            typescript: {
+              project: 'packages/next/tsconfig.json',
+            },
+          },
+          tailwindcss: {
+            config: 'packages/next/tailwind.config.ts',
+          },
+        },
+      }
+    ],
+    rules: {
+      '@next/next/no-html-link-for-pages': ['error', 'packages/next/app'],
+      // Overwrite my rule
+    }
+  }),
+  ...toyokumoEslint.config({
+    files: ['packages/ui-component/**/*.ts', 'packages/ui-component/**/*.tsx'],
+    extends: [
+      ...toyokumoEsLint.configs.ts,
+      toyokumoEsLint.configs.react,
+      ...toyokumoEsLint.configs.tailwindcss,
+      toyokumoEsLint.configs.prettier,
+      {
+        languageOptions: {
+          parserOptions: {
+            project: 'packages/ui-component/tsconfig.json',
+          },
+        },
+        settings: {
+          'import/resolver': {
+            typescript: {
+              project: 'packages/ui-component/tsconfig.json',
+            },
+          },
+          tailwindcss: {
+            config: 'packages/ui-component/tailwind.config.ts',
+          },
+        },
+      }
+    ],
+    rules: {
+      // Overwrite my rule
+    }
+  })
+];
 ```
