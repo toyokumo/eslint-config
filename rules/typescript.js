@@ -3,6 +3,7 @@ const jsLint = require('@eslint/js');
 const importPlugin = require('eslint-plugin-import');
 const tsPlugin = require('@typescript-eslint/eslint-plugin');
 const tsParser = require('@typescript-eslint/parser');
+const globals = require('globals');
 
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
@@ -15,6 +16,10 @@ module.exports = config({
           ecmaFeatures: { modules: true },
           ecmaVersion: 'latest',
           project: './tsconfig.json',
+        },
+        globals: {
+          ...globals.browser,
+          ...globals.node,
         },
       },
       plugins: {
