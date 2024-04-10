@@ -1,15 +1,3 @@
 const toyokumoEsLint = require('./index.js');
-const globals = require('globals');
 
-module.exports = [
-  ...toyokumoEsLint.configs.js,
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.jest,
-      },
-    },
-  },
-];
+module.exports = [...toyokumoEsLint.configs.js, ...toyokumoEsLint.configs.jest];

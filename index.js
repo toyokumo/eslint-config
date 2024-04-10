@@ -1,7 +1,9 @@
-const javascript = require('./rules/javascript');
+const javascriptLint = require('./rules/javascript');
+const jestLint = require('./rules/jest');
 
 module.exports = {
   configs: {
-    js: javascript,
+    js: javascriptLint,
+    jest: jestLint,
   },
 };

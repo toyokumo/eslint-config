@@ -1,6 +1,7 @@
 const config = require('./config-helper.js');
 const jsLint = require('@eslint/js');
 const importPlugin = require('eslint-plugin-import');
+const globals = require('globals');
 
 module.exports = config({
   files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
@@ -13,6 +14,10 @@ module.exports = config({
           // This is required to avoid ecmaVersion < 2015 error or 'import' / 'export' error
           ecmaVersion: 'latest',
           sourceType: 'module',
+        },
+        globals: {
+          ...globals.browser,
+          ...globals.node,
         },
       },
       plugins: {
