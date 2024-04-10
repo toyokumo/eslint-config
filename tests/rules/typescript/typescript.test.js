@@ -1,7 +1,7 @@
 const { loadESLint } = require('eslint');
 const path = require('node:path');
 
-test('typescript', async () => {
+test('ts', async () => {
   const FlatESLint = await loadESLint({ useFlatConfig: true });
   const eslint = new FlatESLint({ cwd: path.resolve(__dirname, 'tests/rules/typescript') });
 

@@ -2,7 +2,7 @@ const toyokumoEsLint = require('../../../index.js');
 const path = require('node:path');
 
 module.exports = [
-    ...toyokumoEsLint.config({
+  ...toyokumoEsLint.config({
     files: ['**/*.ts', '**/*.tsx'],
     extends: [
       ...toyokumoEsLint.configs.ts,
@@ -14,9 +14,9 @@ module.exports = [
         },
         settings: {
           'import/resolver': {
-              typescript: {
-                  project: path.resolve(__dirname, 'tsconfig.json'),
-              }
+            typescript: {
+              project: path.resolve(__dirname, 'tsconfig.json'),
+            },
           },
         },
       },
