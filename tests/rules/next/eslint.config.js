@@ -8,6 +8,7 @@ module.exports = [
       ...toyokumoEsLint.configs.ts,
       toyokumoEsLint.configs.react,
       toyokumoEsLint.configs.next,
+      ...toyokumoEsLint.configs.tailwindcss,
       {
         languageOptions: {
           parserOptions: {
@@ -19,6 +20,9 @@ module.exports = [
             typescript: {
               project: path.resolve(__dirname, 'tsconfig.json'),
             },
+          },
+          tailwindcss: {
+            config: path.resolve(__dirname, 'tailwind.config.ts'),
           },
         },
       },
