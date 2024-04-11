@@ -88,3 +88,10 @@ class MyClass {
   bar() {}
 }
 doSomething(new MyClass());
+
+// for 'lines-around-directive': 'error',
+function f3() {
+  'use strict';
+  return 1;
+}
+f3();
