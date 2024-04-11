@@ -53,3 +53,12 @@ const f1 = (f) => f();
 f1(function () {
   return 10;
 });
+
+// for 'no-shadow': 'error',
+let err = 'x';
+
+try {
+  doSomething(err);
+} catch (err) {
+  doSomething(err);
+}

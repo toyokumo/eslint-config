@@ -53,6 +53,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'prefer-arrow-callback',
       }),
+      expect.objectContaining({
+        ruleId: 'no-shadow',
+      }),
     ]),
   );
 });
