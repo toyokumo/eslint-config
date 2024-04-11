@@ -51,5 +51,6 @@ module.exports = config({
     camelcase: ['error', { properties: 'never' }],
     'lines-between-class-members': 'error',
     'lines-around-directive': 'error',
+    'no-array-constructor': 'error',
   },
 });

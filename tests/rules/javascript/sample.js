@@ -95,3 +95,7 @@ function f3() {
   return 1;
 }
 f3();
+
+// for 'no-array-constructor': 'error',
+doSomething(Array());
+doSomething(Array(0, 1, 2));

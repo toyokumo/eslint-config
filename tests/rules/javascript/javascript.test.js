@@ -70,9 +70,12 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'lines-between-class-members',
       }),
-    expect.objectContaining({
+      expect.objectContaining({
         ruleId: 'lines-around-directive',
-    }),
+      }),
+      expect.objectContaining({
+        ruleId: 'no-array-constructor',
+      }),
     ]),
   );
 });
