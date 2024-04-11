@@ -47,6 +47,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-var',
       }),
+      expect.objectContaining({
+        ruleId: 'object-shorthand',
+      }),
     ]),
   );
 });

@@ -42,3 +42,8 @@ doSomething(a1, a2);
 // for 'no-var': 'error',
 var a3 = 1;
 doSomething(a3);
+
+// for 'object-shorthand': ['error', 'always', { ignoreConstructors: false, avoidQuotes: true }],
+const a4 = 13;
+const a5 = { a4: a4 };
+doSomething(a5);
