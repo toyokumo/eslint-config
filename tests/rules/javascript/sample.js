@@ -33,3 +33,8 @@ class B {
   constructor() {}
 }
 doSomething(new B());
+
+// for 'no-useless-rename': 'error',
+const a1 = { a2: 0 };
+const { a2: a2 } = a1;
+doSomething(a1, a2);

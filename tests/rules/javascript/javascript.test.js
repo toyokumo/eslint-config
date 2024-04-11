@@ -41,6 +41,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-useless-constructor',
       }),
+      expect.objectContaining({
+        ruleId: 'no-useless-rename',
+      }),
     ]),
   );
 });
