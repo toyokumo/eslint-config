@@ -27,6 +27,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'arrow-body-style',
       }),
+      expect.objectContaining({
+        ruleId: 'constructor-super',
+      }),
     ]),
   );
 });

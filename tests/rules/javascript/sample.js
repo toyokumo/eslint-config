@@ -1,6 +1,6 @@
 import { b } from './module.js';
 
-console.log(b);
+const doSomething = (_) => undefined;
 
 const name = 'eslint';
 
@@ -12,8 +12,14 @@ if (true) {
 const f = (x, _) => x;
 f(1, 2);
 
-// for 'arrow-body-style': ['error'],
+// for 'arrow-body-style': 'error',
 const g = () => {
   return 10;
 };
 g();
+
+// for 'constructor-super': 'error',
+class A extends null {
+  constructor() {}
+}
+doSomething(new A());
