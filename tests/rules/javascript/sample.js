@@ -62,3 +62,9 @@ try {
 } catch (err) {
   doSomething(err);
 }
+
+// for 'no-use-before-define': 'error',
+f2();
+function f2() {
+  return 1;
+}

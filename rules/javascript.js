@@ -59,5 +59,6 @@ module.exports = config({
     ],
     'prefer-arrow-callback': 'error',
     'no-shadow': 'error',
+    'no-use-before-define': 'error',
   },
 });

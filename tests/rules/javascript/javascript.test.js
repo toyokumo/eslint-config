@@ -56,6 +56,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-shadow',
       }),
+      expect.objectContaining({
+        ruleId: 'no-use-before-define',
+      }),
     ]),
   );
 });
