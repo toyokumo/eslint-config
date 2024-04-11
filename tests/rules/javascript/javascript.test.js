@@ -24,6 +24,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-constant-condition',
       }),
+      expect.objectContaining({
+        ruleId: 'arrow-body-style',
+      }),
     ]),
   );
 });

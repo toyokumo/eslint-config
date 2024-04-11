@@ -38,5 +38,6 @@ module.exports = config({
   rules: {
     ...importPlugin.configs.recommended.rules,
     'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+    'arrow-body-style': ['error'],
   },
 });
