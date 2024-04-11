@@ -38,3 +38,7 @@ doSomething(new B());
 const a1 = { a2: 0 };
 const { a2: a2 } = a1;
 doSomething(a1, a2);
+
+// for 'no-var': 'error',
+var a3 = 1;
+doSomething(a3);
