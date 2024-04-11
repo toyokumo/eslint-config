@@ -46,5 +46,6 @@ module.exports = config({
         restrictedNamedExports: ['default', 'then'],
       },
     ],
+    'no-useless-constructor': 'error',
   },
 });

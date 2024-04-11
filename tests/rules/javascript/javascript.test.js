@@ -38,6 +38,9 @@ test('javascript', async () => {
         ruleId: 'no-restricted-exports',
         message: "'then' is restricted from being used as an exported name.",
       }),
+      expect.objectContaining({
+        ruleId: 'no-useless-constructor',
+      }),
     ]),
   );
 });

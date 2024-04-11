@@ -27,3 +27,9 @@ doSomething(new A());
 // for 'no-restricted-exports': ['error', { restrictedNamedExports: ['default', 'then'] }],
 export { a as default } from './module.js';
 export { b as then } from './module.js';
+
+// for 'no-useless-constructor': 'error',
+class B {
+  constructor() {}
+}
+doSomething(new B());
