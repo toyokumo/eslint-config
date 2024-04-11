@@ -1,4 +1,4 @@
-import { b } from './module.js';
+import { nothing } from './module.js';
 
 const doSomething = (_) => undefined;
 
@@ -23,3 +23,7 @@ class A extends null {
   constructor() {}
 }
 doSomething(new A());
+
+// for 'no-restricted-exports': ['error', { restrictedNamedExports: ['default', 'then'] }],
+export { a as default } from './module.js';
+export { b as then } from './module.js';

@@ -40,5 +40,11 @@ module.exports = config({
     'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
     'arrow-body-style': 'error',
     'constructor-super': 'error',
+    'no-restricted-exports': [
+      'error',
+      {
+        restrictedNamedExports: ['default', 'then'],
+      },
+    ],
   },
 });

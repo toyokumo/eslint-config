@@ -30,6 +30,14 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'constructor-super',
       }),
+      expect.objectContaining({
+        ruleId: 'no-restricted-exports',
+        message: "'default' is restricted from being used as an exported name.",
+      }),
+      expect.objectContaining({
+        ruleId: 'no-restricted-exports',
+        message: "'then' is restricted from being used as an exported name.",
+      }),
     ]),
   );
 });
