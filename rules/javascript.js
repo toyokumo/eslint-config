@@ -57,5 +57,6 @@ module.exports = config({
         avoidQuotes: true,
       },
     ],
+    'prefer-arrow-callback': 'error',
   },
 });

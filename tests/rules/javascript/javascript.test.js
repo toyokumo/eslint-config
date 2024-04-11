@@ -50,6 +50,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'object-shorthand',
       }),
+      expect.objectContaining({
+        ruleId: 'prefer-arrow-callback',
+      }),
     ]),
   );
 });

@@ -47,3 +47,9 @@ doSomething(a3);
 const a4 = 13;
 const a5 = { a4: a4 };
 doSomething(a5);
+
+// for 'prefer-arrow-callback': 'error',
+const f1 = (f) => f();
+f1(function () {
+  return 10;
+});
