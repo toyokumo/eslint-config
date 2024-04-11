@@ -59,6 +59,14 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-use-before-define',
       }),
+      expect.objectContaining({
+        ruleId: 'camelcase',
+        message: "Identifier 'a_5' is not in camel case.",
+      }),
+      expect.objectContaining({
+        ruleId: 'camelcase',
+        message: "Identifier 'a_6' is not in camel case.",
+      }),
     ]),
   );
 });

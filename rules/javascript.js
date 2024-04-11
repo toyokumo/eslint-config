@@ -40,25 +40,14 @@ module.exports = config({
     'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
     'arrow-body-style': 'error',
     'constructor-super': 'error',
-    'no-restricted-exports': [
-      'error',
-      {
-        restrictedNamedExports: ['default', 'then'],
-      },
-    ],
+    'no-restricted-exports': ['error', { restrictedNamedExports: ['default', 'then'] }],
     'no-useless-constructor': 'error',
     'no-useless-rename': 'error',
     'no-var': 'error',
-    'object-shorthand': [
-      'error',
-      'always',
-      {
-        ignoreConstructors: false,
-        avoidQuotes: true,
-      },
-    ],
+    'object-shorthand': ['error', 'always', { ignoreConstructors: false, avoidQuotes: true }],
     'prefer-arrow-callback': 'error',
     'no-shadow': 'error',
     'no-use-before-define': 'error',
+    camelcase: ['error', { properties: 'never' }],
   },
 });
