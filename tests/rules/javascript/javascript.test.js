@@ -67,6 +67,9 @@ test('javascript', async () => {
         ruleId: 'camelcase',
         message: "Identifier 'a_6' is not in camel case.",
       }),
+      expect.objectContaining({
+        ruleId: 'lines-between-class-members',
+      }),
     ]),
   );
 });

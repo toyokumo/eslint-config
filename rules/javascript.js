@@ -49,5 +49,6 @@ module.exports = config({
     'no-shadow': 'error',
     'no-use-before-define': 'error',
     camelcase: ['error', { properties: 'never' }],
+    'lines-between-class-members': 'error',
   },
 });

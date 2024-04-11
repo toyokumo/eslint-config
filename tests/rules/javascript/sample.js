@@ -80,3 +80,11 @@ doSomething(a6);
 
 const { a_6 } = { a_6: 10 };
 doSomething(a_6);
+
+// for 'lines-between-class-members': 'error',
+class MyClass {
+  x;
+  foo() {}
+  bar() {}
+}
+doSomething(new MyClass());
