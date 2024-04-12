@@ -52,5 +52,6 @@ module.exports = config({
     'lines-between-class-members': 'error',
     'lines-around-directive': 'error',
     'no-array-constructor': 'error',
+    'no-continue': 'error',
   },
 });
