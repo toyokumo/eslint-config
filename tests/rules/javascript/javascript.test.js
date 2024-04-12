@@ -76,6 +76,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'no-array-constructor',
       }),
+      expect.objectContaining({
+        ruleId: 'max-classes-per-file',
+      }),
     ]),
   );
 });
