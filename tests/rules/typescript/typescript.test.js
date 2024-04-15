@@ -21,6 +21,9 @@ test('ts', async () => {
       expect.objectContaining({
         ruleId: '@typescript-eslint/array-type',
       }),
+      expect.objectContaining({
+        ruleId: '@typescript-eslint/consistent-type-imports',
+      }),
     ]),
   );
 });
