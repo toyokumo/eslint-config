@@ -13,7 +13,7 @@ const nextPlugin = require('@next/eslint-plugin-next');
      files: ['** / *.ts', '** / *.tsx'],
      extends: [
        ...toyokumoEslint.configs.ts,
-       toyokumoEslint.configs.react,
+       ...toyokumoEslint.configs.react,
        toyokumoEslint.configs.next,
      ],
      rules: {

@@ -8,7 +8,7 @@ module.exports = [
     files: ['**/*.ts', '**/*.tsx'],
     extends: [
       ...toyokumoEsLint.configs.ts,
-      toyokumoEsLint.configs.react,
+      ...toyokumoEsLint.configs.react,
       toyokumoEsLint.configs.next,
       ...toyokumoEsLint.configs.tailwindcss,
       {

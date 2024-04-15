@@ -13,5 +13,11 @@ test('tsx', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/typescript/sample.tsx'), null, 2));
 
-  expect(results[0].messages).toEqual(expect.arrayContaining([]));
+  expect(results[0].messages).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        ruleId: 'react/function-component-definition',
+      }),
+    ]),
+  );
 });

@@ -87,7 +87,7 @@ module.exports = [
   ...toyokumoEslint.configs.base,
   ...toyokumoEsLint.configs.js,
   ...toyokumoEsLint.configs.ts,
-  toyokumoEsLint.configs.react,
+  ...toyokumoEsLint.configs.react,
   toyokumoEsLint.configs.next,
   ...toyokumoEsLint.configs.tailwindcss,
   toyokumoEsLint.configs.prettier,
@@ -105,7 +105,7 @@ module.exports = [
     files: ['packages/next/**/*.ts', 'packages/next/**/*.tsx'],
     extends: [
       ...toyokumoEsLint.configs.ts,
-      toyokumoEsLint.configs.react,
+      ...toyokumoEsLint.configs.react,
       toyokumoEsLint.configs.next,
       ...toyokumoEsLint.configs.tailwindcss,
       toyokumoEsLint.configs.prettier,
@@ -136,7 +136,7 @@ module.exports = [
     files: ['packages/ui-component/**/*.ts', 'packages/ui-component/**/*.tsx'],
     extends: [
       ...toyokumoEsLint.configs.ts,
-      toyokumoEsLint.configs.react,
+      ...toyokumoEsLint.configs.react,
       ...toyokumoEsLint.configs.tailwindcss,
       toyokumoEsLint.configs.prettier,
       {
