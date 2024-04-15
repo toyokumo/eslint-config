@@ -3,6 +3,7 @@ const path = require('node:path');
 
 module.exports = [
   ...toyokumoEsLint.configs.base,
+  ...toyokumoEsLint.configs.jest,
   ...toyokumoEsLint.config({
     files: ['**/*.ts', '**/*.tsx'],
     extends: [
