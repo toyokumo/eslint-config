@@ -99,3 +99,10 @@ f3();
 // for 'no-array-constructor': 'error',
 doSomething(Array());
 doSomething(Array(0, 1, 2));
+
+// for 'no-array-constructor': 'error',
+const f4 = function (bar) {
+  bar = 13;
+  return bar;
+};
+doSomething(f4(5));

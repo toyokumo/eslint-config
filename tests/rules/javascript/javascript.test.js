@@ -79,6 +79,9 @@ test('javascript', async () => {
       expect.objectContaining({
         ruleId: 'max-classes-per-file',
       }),
+      expect.objectContaining({
+        ruleId: 'no-param-reassign',
+      }),
     ]),
   );
 });

@@ -12,6 +12,7 @@ module.exports = [
     rules: {
       ...jsLint.configs.recommended.rules,
       'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+      'no-param-reassign': 'error',
       'arrow-body-style': 'error',
       'constructor-super': 'error',
       'no-restricted-exports': ['error', { restrictedNamedExports: ['default', 'then'] }],
