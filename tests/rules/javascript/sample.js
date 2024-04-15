@@ -49,7 +49,7 @@ const a5 = { a4: a4 };
 doSomething(a5);
 
 // for 'prefer-arrow-callback': 'error',
-const f1 = (f) => f();
+const f1 = (f11) => f11();
 f1(function () {
   return 10;
 });

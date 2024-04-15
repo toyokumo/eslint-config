@@ -61,6 +61,7 @@ Imported toyokumoEslint is a object of ESLint configurations.
   config,
   // configs is a object of ESLint configurations.
   configs: {
+    base, // Linter.FlatConfig[]
     js, // Linter.FlatConfig[]
     ts, // Linter.FlatConfig[]
     react, // Linter.FlatConfig
@@ -83,6 +84,7 @@ We just set the ideal rule set, so we can overwrite or ignore the rule depending
 const toyokumoEslint = require('@toyokumo/eslint-config');
 
 module.exports = [
+  ...toyokumoEslint.configs.base,
   ...toyokumoEsLint.configs.js,
   ...toyokumoEsLint.configs.ts,
   toyokumoEsLint.configs.react,
@@ -98,6 +100,7 @@ module.exports = [
 
 // Multi modules
 module.exports = [
+  ...toyokumoEslint.configs.base,
   ...toyokumoEslint.config({
     files: ['packages/next/**/*.ts', 'packages/next/**/*.tsx'],
     extends: [

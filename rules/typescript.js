@@ -1,5 +1,4 @@
 const config = require('./config-helper.js');
-const jsLint = require('@eslint/js');
 const importPlugin = require('eslint-plugin-import');
 const tsPlugin = require('@typescript-eslint/eslint-plugin');
 const tsParser = require('@typescript-eslint/parser');
@@ -8,7 +7,6 @@ const globals = require('globals');
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
   extends: [
-    jsLint.configs.recommended,
     {
       languageOptions: {
         parser: tsParser,
