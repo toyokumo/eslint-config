@@ -18,6 +18,9 @@ test('tailwind', async () => {
       expect.objectContaining({
         ruleId: 'tailwindcss/classnames-order',
       }),
+      expect.objectContaining({
+        ruleId: 'tailwindcss/no-custom-classname',
+      }),
     ]),
   );
 });
