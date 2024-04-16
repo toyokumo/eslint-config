@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/toyokumo/eslint-config/compare/v2.0.1...v2.0.2) (2024-04-16)
+
 ### [2.0.1](https://github.com/toyokumo/eslint-config/compare/v1.1.5...v2.0.1) (2024-04-16)
 
 ### [1.1.6](https://github.com/toyokumo/eslint-config/compare/v1.1.1...v1.1.6) (2023-10-02)
