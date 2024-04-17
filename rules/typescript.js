@@ -1,12 +1,13 @@
 const config = require('./config-helper.js');
 const importPlugin = require('eslint-plugin-import');
-const tsPlugin = require('@typescript-eslint/eslint-plugin');
+const tsEslint = require('typescript-eslint');
 const tsParser = require('@typescript-eslint/parser');
 const globals = require('globals');
 
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
   extends: [
+    ...tsEslint.configs.recommended,
     {
       languageOptions: {
         parser: tsParser,
@@ -21,7 +22,6 @@ module.exports = config({
         },
       },
       plugins: {
-        '@typescript-eslint': tsPlugin,
         import: importPlugin,
       },
       settings: {
@@ -39,7 +39,6 @@ module.exports = config({
   ],
   rules: {
     ...importPlugin.configs.recommended.rules,
-    ...tsPlugin.configs.recommended.rules,
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],

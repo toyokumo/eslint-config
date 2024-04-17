@@ -18,6 +18,9 @@ test('tsx', async () => {
       expect.objectContaining({
         ruleId: 'react/function-component-definition',
       }),
+      expect.not.objectContaining({
+        ruleId: 'no-undef',
+      }),
     ]),
   );
 });
