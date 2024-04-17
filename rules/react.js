@@ -36,6 +36,7 @@ module.exports = [
       'jsx-a11y': jsxA11yPlugin,
     },
     settings: {
+      ...reactRecommended.languageOptions,
       react: {
         version: 'detect',
       },
