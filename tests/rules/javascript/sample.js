@@ -4,8 +4,13 @@ const doSomething = (_) => undefined;
 
 const name = 'eslint';
 
+// for 'no-constant-condition': ["error", { "checkLoops": false }],
 if (true) {
   console.log('constant condition warning');
+}
+// OK
+while (false) {
+  doSomething(10);
 }
 
 // for 'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],

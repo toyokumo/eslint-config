@@ -62,6 +62,7 @@ module.exports = [
       'no-compare-neg-zero': 'error',
       'no-cond-assign': ['error', 'always'],
       'no-console': 'warn',
+      'no-constant-condition': ['error', { checkLoops: false }],
       'no-unreachable-loop': 'error',
       'consistent-return': 'error',
       'default-case': ['error', { commentPattern: '^no default$' }],
