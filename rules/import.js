@@ -20,5 +20,6 @@ module.exports = {
         ],
       },
     ],
+    'import/no-relative-packages': 'error',
   },
 };
