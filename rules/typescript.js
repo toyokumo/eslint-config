@@ -1,5 +1,6 @@
 const config = require('./config-helper.js');
 const importPlugin = require('eslint-plugin-import');
+const importRule = require('./import.js');
 const tsEslint = require('typescript-eslint');
 const tsParser = require('@typescript-eslint/parser');
 const globals = require('globals');
@@ -39,6 +40,7 @@ module.exports = config({
   ],
   rules: {
     ...importPlugin.configs.recommended.rules,
+    ...importRule.rules,
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],

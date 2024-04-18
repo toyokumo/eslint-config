@@ -1,5 +1,6 @@
 const config = require('./config-helper.js');
 const importPlugin = require('eslint-plugin-import');
+const importRule = require('./import.js');
 
 module.exports = config({
   files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
@@ -30,5 +31,6 @@ module.exports = config({
   ],
   rules: {
     ...importPlugin.configs.recommended.rules,
+    ...importRule.rules,
   },
 });
