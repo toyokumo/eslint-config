@@ -64,7 +64,8 @@ Imported toyokumoEslint is a object of ESLint configurations.
     base, // Linter.FlatConfig[]
     js, // Linter.FlatConfig[]
     ts, // Linter.FlatConfig[]
-    react, // Linter.FlatConfig
+    tsx, // Linter.FlatConfig[]
+    react, // Linter.FlatConfig[]
     next, // Linter.FlatConfig
     tailwindcss, // Linter.FlatConfig[]
     jest, // Linter.FlatConfig[]
@@ -87,6 +88,7 @@ module.exports = [
   ...toyokumoEslint.configs.base,
   ...toyokumoEsLint.configs.js,
   ...toyokumoEsLint.configs.ts,
+  ...toyokumoEsLint.configs.tsx,
   ...toyokumoEsLint.configs.react,
   toyokumoEsLint.configs.next,
   ...toyokumoEsLint.configs.tailwindcss,
@@ -101,6 +103,7 @@ module.exports = [
 // Multi modules
 module.exports = [
   ...toyokumoEslint.configs.base,
+  ...toyokumoEsLint.configs.tsx, // *.tsx only.
   ...toyokumoEslint.config({
     files: ['packages/next/**/*.ts', 'packages/next/**/*.tsx'],
     extends: [

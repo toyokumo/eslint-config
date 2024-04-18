@@ -1,7 +1,7 @@
 const nextPlugin = require('@next/eslint-plugin-next');
 
 /*
- this rule depends on rules for typescript and react.
+ this rule depends on rules of typescript and tsx, react.
 
  Usage Example:
 
@@ -9,6 +9,7 @@ const nextPlugin = require('@next/eslint-plugin-next');
  import toyokumoEslint from '@toyokumo/eslint-config';
 
  export default = [
+   ...toyokumoEslint.configs.tsx,
    ...toyokumoEslint.config({
      files: ['** / *.ts', '** / *.tsx'],
      extends: [

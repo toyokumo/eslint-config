@@ -4,7 +4,7 @@ const hooksPlugin = require('eslint-plugin-react-hooks');
 const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
 
 /*
- this rule depends on rules for typescript.
+ this rule depends on rules of typescript and tsx.
 
  Usage Example:
 
@@ -12,6 +12,7 @@ const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
  import toyokumoEslint from '@toyokumo/eslint-config';
 
  export default = [
+   ...toyokumoEslint.configs.tsx,
    ...toyokumoEslint.config({
      files: ['** / *.ts', '** / *.tsx'],
      extends: [
@@ -21,7 +22,7 @@ const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
      rules: {
        ...myRules,
      },
-   })
+   }),
  ]
 ```
 
@@ -46,13 +47,7 @@ module.exports = [
       ...reactPlugin.configs['jsx-runtime'].rules,
       ...hooksPlugin.configs.recommended.rules,
       ...jsxA11yPlugin.configs.recommended.rules,
-    },
-  },
-  {
-    files: ['**/*.tsx'],
-    rules: {
       'react/function-component-definition': 'error',
-      'import/prefer-default-export': 'warn',
     },
   },
 ];

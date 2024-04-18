@@ -2,6 +2,7 @@ const baseLint = require('./rules/base');
 const javascriptLint = require('./rules/javascript');
 const jestLint = require('./rules/jest');
 const tsLint = require('./rules/typescript');
+const tsxLint = require('./rules/typescript-jsx');
 const reactLint = require('./rules/react');
 const nextLint = require('./rules/next');
 const tailwindCssLint = require('./rules/tailwindcss');
@@ -15,6 +16,7 @@ module.exports = {
     js: javascriptLint,
     jest: jestLint,
     ts: tsLint,
+    tsx: tsxLint,
     react: reactLint,
     next: nextLint,
     tailwindcss: tailwindCssLint,
