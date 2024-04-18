@@ -7,5 +7,5 @@ module.exports = [
   {
     ignores: ['tests'],
   },
-  toyokumoEsLint.configs.prettier,
+  ...toyokumoEsLint.configs.prettier,
 ];

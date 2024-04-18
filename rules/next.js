@@ -15,7 +15,7 @@ const nextPlugin = require('@next/eslint-plugin-next');
      extends: [
        ...toyokumoEslint.configs.ts,
        ...toyokumoEslint.configs.react,
-       toyokumoEslint.configs.next,
+       ...toyokumoEslint.configs.next,
      ],
      rules: {
        ...myRules,
@@ -26,7 +26,7 @@ const nextPlugin = require('@next/eslint-plugin-next');
 
  */
 
-module.exports = {
+module.exports = [{
   files: ['**/*.ts', '**/*.tsx'],
   plugins: {
     '@next/next': nextPlugin,
@@ -35,4 +35,4 @@ module.exports = {
     ...nextPlugin.configs.recommended.rules,
     ...nextPlugin.configs['core-web-vitals'].rules,
   },
-};
+}];

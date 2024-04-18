@@ -66,10 +66,10 @@ Imported toyokumoEslint is a object of ESLint configurations.
     ts, // Linter.FlatConfig[]
     tsx, // Linter.FlatConfig[]
     react, // Linter.FlatConfig[]
-    next, // Linter.FlatConfig
+    next, // Linter.FlatConfig[]
     tailwindcss, // Linter.FlatConfig[]
     jest, // Linter.FlatConfig[]
-    prettier, // Linter.FlatConfig
+    prettier, // Linter.FlatConfig[]
   },
 }
 
@@ -90,9 +90,9 @@ module.exports = [
   ...toyokumoEsLint.configs.ts,
   ...toyokumoEsLint.configs.tsx,
   ...toyokumoEsLint.configs.react,
-  toyokumoEsLint.configs.next,
+  ...toyokumoEsLint.configs.next,
   ...toyokumoEsLint.configs.tailwindcss,
-  toyokumoEsLint.configs.prettier,
+  ...toyokumoEsLint.configs.prettier,
   {
     rules: {
       // Overwrite my rule
@@ -109,9 +109,8 @@ module.exports = [
     extends: [
       ...toyokumoEsLint.configs.ts,
       ...toyokumoEsLint.configs.react,
-      toyokumoEsLint.configs.next,
+      ...toyokumoEsLint.configs.next,
       ...toyokumoEsLint.configs.tailwindcss,
-      toyokumoEsLint.configs.prettier,
       {
         languageOptions: {
           parserOptions: {
@@ -141,7 +140,6 @@ module.exports = [
       ...toyokumoEsLint.configs.ts,
       ...toyokumoEsLint.configs.react,
       ...toyokumoEsLint.configs.tailwindcss,
-      toyokumoEsLint.configs.prettier,
       {
         languageOptions: {
           parserOptions: {
@@ -163,6 +161,7 @@ module.exports = [
     rules: {
       // Overwrite my rule
     }
-  })
+  }),
+  ...toyokumoEsLint.configs.prettier,
 ];
 ```

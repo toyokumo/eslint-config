@@ -10,7 +10,7 @@ module.exports = [
     extends: [
       ...toyokumoEsLint.configs.ts,
       ...toyokumoEsLint.configs.react,
-      toyokumoEsLint.configs.next,
+      ...toyokumoEsLint.configs.next,
       ...toyokumoEsLint.configs.tailwindcss,
       {
         languageOptions: {
