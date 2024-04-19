@@ -15,6 +15,7 @@ module.exports = config({
         parserOptions: {
           ecmaFeatures: { modules: true },
           ecmaVersion: 'latest',
+          sourceType: 'module',
           project: './tsconfig.json',
         },
         globals: {
@@ -28,6 +29,9 @@ module.exports = config({
       settings: {
         // https://github.com/import-js/eslint-import-resolver-typescript#configuration
         'import/parsers': {
+          // did the trick https://github.com/import-js/eslint-plugin-import/issues/2556
+          // Enable to parse .js files written in ES module syntax.
+          espree: ['.js', '.cjs', '.mjs'],
           '@typescript-eslint/parser': ['.ts', '.tsx'],
         },
         'import/resolver': {
