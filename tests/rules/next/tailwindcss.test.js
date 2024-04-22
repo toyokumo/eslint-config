@@ -13,6 +13,7 @@ test('tailwind', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/next/app/layout.tsx'), null, 2));
 
+  expect(results[0].messages.length).toBe(2);
   expect(results[0].messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({

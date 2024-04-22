@@ -13,6 +13,7 @@ test('tsx', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/typescript/sample.tsx'), null, 2));
 
+  expect(results[0].messages.length).toBe(1);
   expect(results[0].messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -40,6 +41,7 @@ test('prefer-default-export any', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/typescript/sample2.tsx'), null, 2));
 
+  expect(results[0].messages.length).toBe(1);
   expect(results[0].messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({

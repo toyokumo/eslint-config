@@ -12,8 +12,12 @@ type HomeProps = {
 };
 
 function Home({ x = 13 }: HomeProps) {
-  const [n] = useState<number>(0);
-  return <div>{x + n}</div>;
+  const [n, setN] = useState<number>(() => 0);
+  return (
+    <button type="button" onClick={() => setN(n + 1)}>
+      {x + n}
+    </button>
+  );
 }
 
 Home.A = A;

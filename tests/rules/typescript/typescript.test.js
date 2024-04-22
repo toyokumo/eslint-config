@@ -13,6 +13,7 @@ test('ts', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./tests/rules/typescript/sample.ts'), null, 2));
 
+  expect(results[0].messages.length).toBe(3);
   expect(results[0].messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({

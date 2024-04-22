@@ -7,9 +7,7 @@ const a: NumberArray = [1, 2, 3];
 doSomething(a);
 
 // for '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
-const f = (x: number, _: number) => {
-  return x;
-};
+const f = (x: number, _: number) => x;
 
 f(3, b);
 

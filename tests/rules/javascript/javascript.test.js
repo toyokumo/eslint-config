@@ -13,6 +13,7 @@ test('javascript', async () => {
 
   // console.log(JSON.stringify(await eslint.calculateConfigForFile('./rules/javascript.js'), null, 2));
 
+  expect(results[0].messages.length).toBe(26);
   expect(results[0].messages).toEqual(
     expect.arrayContaining([
       expect.objectContaining({ ruleId: 'import/named' }),
