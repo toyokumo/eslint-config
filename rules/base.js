@@ -9,6 +9,9 @@ module.exports = [
         ...globals.node,
       },
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    },
     rules: {
       ...jsLint.configs.recommended.rules,
       'no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
