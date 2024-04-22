@@ -74,7 +74,7 @@ function f2() {
   return 1;
 }
 
-// for 'camelcase': ['error', { properties: 'always' }],
+// for 'camelcase': ['error', { properties: 'never' }],
 const a_5 = 5;
 doSomething(a_5);
 
@@ -83,8 +83,8 @@ const a6 = {
 };
 doSomething(a6);
 
-const { a6: a_6 } = { a6: 10 };
-doSomething(a_6);
+const { a_7: a7 } = { a_7: 10 };
+doSomething(a7);
 
 // for 'lines-between-class-members': 'error',
 class MyClass {
