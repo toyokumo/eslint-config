@@ -74,16 +74,16 @@ function f2() {
   return 1;
 }
 
-// for 'camelcase': ['error', { properties: 'never' }],
+// for 'camelcase': ['error', { properties: 'always' }],
 const a_5 = 5;
 doSomething(a_5);
 
 const a6 = {
-  a_____6: 10, // OK
+  a__6: 10,
 };
 doSomething(a6);
 
-const { a_6 } = { a_6: 10 };
+const { a6: a_6 } = { a6: 10 };
 doSomething(a_6);
 
 // for 'lines-between-class-members': 'error',

@@ -32,7 +32,7 @@ module.exports = [
       'prefer-arrow-callback': 'error',
       'no-shadow': 'error',
       'no-use-before-define': 'error',
-      camelcase: ['error', { properties: 'never' }],
+      camelcase: ['error', { properties: 'always' }],
       'lines-between-class-members': 'error',
       'lines-around-directive': 'error',
       'no-array-constructor': 'error',
