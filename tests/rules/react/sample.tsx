@@ -7,6 +7,18 @@ function A(children: React.ReactNode) {
   return <div>{children}</div>;
 }
 
+// for 'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
+function B({ children, isB }: { children: React.ReactNode; isB: boolean }) {
+  if (isB) {
+    return (
+      <>
+        <div>{children}</div>
+      </>
+    );
+  }
+  return <>{children}</>; // OK
+}
+
 type HomeProps = {
   x?: number;
 };
@@ -21,5 +33,6 @@ function Home({ x = 13 }: HomeProps) {
 }
 
 Home.A = A;
+Home.B = B;
 
 export default Home;

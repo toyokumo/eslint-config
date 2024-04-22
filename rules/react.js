@@ -54,7 +54,7 @@ module.exports = [
       'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never', propElementValues: 'always' }],
       'react/jsx-fragments': 'error',
       'react/jsx-no-constructed-context-values': 'error',
-      'react/jsx-no-useless-fragment': 'error',
+      'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
       'react/jsx-pascal-case': 'error',
       'react/self-closing-comp': 'error',
     },
