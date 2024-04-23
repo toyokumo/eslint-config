@@ -8,7 +8,7 @@ const globals = require('globals');
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
   extends: [
-    ...tsEslint.configs.recommended,
+    ...tsEslint.configs.strict,
     {
       languageOptions: {
         parser: tsParser,
