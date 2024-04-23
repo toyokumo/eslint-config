@@ -10,6 +10,8 @@ module.exports = {
           '**/*{.,_}{test,spec}.{js,jsx,ts,tsx}',
           '**/jest.config.{js,ts}',
           '**/jest.setup.{js,ts}',
+          '**/vite.*.config.{js,ts}',
+          '**/vite.config.*.{js,ts}',
           '**/vite.config.{js,ts}',
           '**/tailwind.config.{js,ts}',
           '**/postcss.config.{js,ts}',
