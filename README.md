@@ -86,13 +86,13 @@ const toyokumoEslint = require('@toyokumo/eslint-config');
 
 module.exports = [
   ...toyokumoEslint.configs.base,
-  ...toyokumoEsLint.configs.js,
-  ...toyokumoEsLint.configs.ts,
-  ...toyokumoEsLint.configs.tsx,
-  ...toyokumoEsLint.configs.react,
-  ...toyokumoEsLint.configs.next,
-  ...toyokumoEsLint.configs.tailwindcss,
-  ...toyokumoEsLint.configs.prettier,
+  ...toyokumoEslint.configs.js,
+  ...toyokumoEslint.configs.ts,
+  ...toyokumoEslint.configs.tsx,
+  ...toyokumoEslint.configs.react,
+  ...toyokumoEslint.configs.next,
+  ...toyokumoEslint.configs.tailwindcss,
+  ...toyokumoEslint.configs.prettier,
   {
     rules: {
       // Overwrite my rule
@@ -103,14 +103,14 @@ module.exports = [
 // Multi modules
 module.exports = [
   ...toyokumoEslint.configs.base,
-  ...toyokumoEsLint.configs.tsx, // *.tsx only.
+  ...toyokumoEslint.configs.tsx, // *.tsx only.
   ...toyokumoEslint.config({
     files: ['packages/next/**/*.ts', 'packages/next/**/*.tsx'],
     extends: [
-      ...toyokumoEsLint.configs.ts,
-      ...toyokumoEsLint.configs.react,
-      ...toyokumoEsLint.configs.next,
-      ...toyokumoEsLint.configs.tailwindcss,
+      ...toyokumoEslint.configs.ts,
+      ...toyokumoEslint.configs.react,
+      ...toyokumoEslint.configs.next,
+      ...toyokumoEslint.configs.tailwindcss,
       {
         languageOptions: {
           parserOptions: {
@@ -137,9 +137,9 @@ module.exports = [
   ...toyokumoEslint.config({
     files: ['packages/ui-component/**/*.ts', 'packages/ui-component/**/*.tsx'],
     extends: [
-      ...toyokumoEsLint.configs.ts,
-      ...toyokumoEsLint.configs.react,
-      ...toyokumoEsLint.configs.tailwindcss,
+      ...toyokumoEslint.configs.ts,
+      ...toyokumoEslint.configs.react,
+      ...toyokumoEslint.configs.tailwindcss,
       {
         languageOptions: {
           parserOptions: {
@@ -162,6 +162,6 @@ module.exports = [
       // Overwrite my rule
     }
   }),
-  ...toyokumoEsLint.configs.prettier,
+  ...toyokumoEslint.configs.prettier,
 ];
 ```
