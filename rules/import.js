@@ -19,6 +19,8 @@ module.exports = {
           '**/webpack.config.js',
           '**/webpack.config.*.js',
           '**/eslint.config.{js,ts}',
+          '**/.prettierrc.{js,cjs,mjs}',
+          '**/prettier.config.{js,cjs,mjs}',
         ],
       },
     ],
