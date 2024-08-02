@@ -13,7 +13,7 @@
     "format": "run-s \"format:eslint -- {1}\" \"format:prettier -- {1}\" --",
     "format:eslint": "eslint --fix",
     "format:prettier": "prettier --write",
-    "format-all": "npm run format \"./**/*.{js,ts,tsx}\"",
+    "format-all": "pnpm run format \"./**/*.{js,ts,tsx}\"",
     "format-all:eslint": "eslint --fix \"./**/*.{js,ts,tsx}\"",
     "format-all:prettier": "prettier --write \"./**/*.{js,ts,tsx}\"",
     "format:check": "prettier --check \"./**/*.{js,ts,tsx}\""
