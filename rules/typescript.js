@@ -4,6 +4,7 @@ const importRule = require('./import.js');
 const tsEslint = require('typescript-eslint');
 const tsParser = require('@typescript-eslint/parser');
 const globals = require('globals');
+const { fixupPluginRules } = require('@eslint/compat');
 
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
@@ -24,7 +25,7 @@ module.exports = config({
         },
       },
       plugins: {
-        import: importPlugin,
+        import: fixupPluginRules(importPlugin),
       },
       settings: {
         // https://github.com/import-js/eslint-import-resolver-typescript#configuration

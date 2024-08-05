@@ -2,6 +2,7 @@ const reactPlugin = require('eslint-plugin-react');
 const reactRecommended = require('eslint-plugin-react/configs/recommended.js');
 const hooksPlugin = require('eslint-plugin-react-hooks');
 const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
+const { fixupPluginRules } = require('@eslint/compat');
 
 /*
  this rule depends on rules of typescript and tsx.
@@ -32,9 +33,9 @@ module.exports = [
   {
     files: ['**/*.ts', '**/*.tsx'],
     plugins: {
-      react: reactPlugin,
-      'react-hooks': hooksPlugin,
-      'jsx-a11y': jsxA11yPlugin,
+      react: fixupPluginRules(reactPlugin),
+      'react-hooks': fixupPluginRules(hooksPlugin),
+      'jsx-a11y': fixupPluginRules(jsxA11yPlugin),
     },
     settings: {
       ...reactRecommended.languageOptions,
