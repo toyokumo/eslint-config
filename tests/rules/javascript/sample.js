@@ -20,7 +20,7 @@ f(1, 2);
 // for 'no-unused-vars': ['error', { caughtErrors: 'all', caughtErrorsIgnorePattern: '^_+$' }],
 try {
   f(2, 3);
-} catch(_) {
+} catch (_) {
   doSomething(10);
 }
 
