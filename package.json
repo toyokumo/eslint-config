@@ -1,6 +1,6 @@
 {
   "name": "@toyokumo/eslint-config",
-  "version": "2.0.14",
+  "version": "2.1.0",
   "engines": {
     "node": ">=18"
   },
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint --max-warnings=0 \"**/*.{js,ts,tsx}\"",
-    "release": "standard-version",
+    "release": "standard-version --release-as minor",
     "format": "run-s \"format:eslint -- {1}\" \"format:prettier -- {1}\" --",
     "format:eslint": "eslint --fix",
     "format:prettier": "prettier --write",
