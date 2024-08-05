@@ -1,6 +1,7 @@
 const config = require('./config-helper.js');
 const importPlugin = require('eslint-plugin-import');
 const importRule = require('./import.js');
+const { fixupPluginRules } = require('@eslint/compat');
 
 module.exports = config({
   files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
@@ -15,7 +16,7 @@ module.exports = config({
         },
       },
       plugins: {
-        import: importPlugin,
+        import: fixupPluginRules(importPlugin),
       },
       settings: {
         // This will do the trick (https://github.com/import-js/eslint-plugin-import/issues/2556)
