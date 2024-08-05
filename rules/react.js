@@ -58,6 +58,7 @@ module.exports = [
       'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
       'react/jsx-pascal-case': 'error',
       'react/self-closing-comp': 'error',
+      'react/prop-types': 'off',
     },
   },
 ];
