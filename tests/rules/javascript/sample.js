@@ -17,6 +17,13 @@ while (false) {
 const f = (x, _) => x;
 f(1, 2);
 
+// for 'no-unused-vars': ['error', { caughtErrors: 'all', caughtErrorsIgnorePattern: '^_+$' }],
+try {
+  f(2, 3);
+} catch(_) {
+  doSomething(10);
+}
+
 // for 'arrow-body-style': 'error',
 const g = () => {
   return 10;
