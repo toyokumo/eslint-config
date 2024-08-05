@@ -1,4 +1,5 @@
 const nextPlugin = require('@next/eslint-plugin-next');
+const { fixupPluginRules } = require('@eslint/compat');
 
 /*
  this rule depends on rules of typescript and tsx, react.
@@ -30,7 +31,7 @@ module.exports = [
   {
     files: ['**/*.ts', '**/*.tsx'],
     plugins: {
-      '@next/next': nextPlugin,
+      '@next/next': fixupPluginRules(nextPlugin),
     },
     rules: {
       ...nextPlugin.configs.recommended.rules,
