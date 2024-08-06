@@ -1,12 +1,9 @@
 const config = require('./config-helper.js');
-const { FlatCompat } = require('@eslint/eslintrc');
-const { fixupPluginRules } = require('@eslint/compat');
-
-const compat = new FlatCompat();
+const tailwindcssLint = require('eslint-plugin-tailwindcss');
 
 module.exports = config({
   files: ['**/*.ts', '**/*.tsx'],
-  extends: [...fixupPluginRules(compat.extends('plugin:tailwindcss/recommended'))],
+  extends: [...tailwindcssLint.configs['flat/recommended']],
   rules: {
     'tailwindcss/migration-from-tailwind-2': 'off',
   },
