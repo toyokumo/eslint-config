@@ -17,7 +17,7 @@ module.exports = config({
           ecmaFeatures: { modules: true },
           ecmaVersion: 'latest',
           sourceType: 'module',
-          project: './tsconfig.json',
+          projectService: true,
         },
         globals: {
           ...globals.browser,

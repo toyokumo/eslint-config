@@ -9,11 +9,6 @@ module.exports = [
     extends: [
       ...toyokumoEsLint.configs.ts,
       {
-        languageOptions: {
-          parserOptions: {
-            project: path.resolve(__dirname, 'tsconfig.json'),
-          },
-        },
         settings: {
           'import/resolver': {
             typescript: {
