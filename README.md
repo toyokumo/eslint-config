@@ -155,3 +155,12 @@ module.exports = [
   ...toyokumoEslint.configs.prettier,
 ];
 ```
+
+# Contribution
+
+```bash
+pnpm install
+pnpm -C tests/rules/next install
+pnpm -C tests/rules/react install
+pnpm run test
+```
