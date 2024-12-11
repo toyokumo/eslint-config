@@ -112,11 +112,6 @@ module.exports = [
       ...toyokumoEslint.configs.next,
       ...toyokumoEslint.configs.tailwindcss,
       {
-        languageOptions: {
-          parserOptions: {
-            project: 'packages/next/tsconfig.json',
-          },
-        },
         settings: {
           'import/resolver': {
             typescript: {
@@ -141,11 +136,6 @@ module.exports = [
       ...toyokumoEslint.configs.react,
       ...toyokumoEslint.configs.tailwindcss,
       {
-        languageOptions: {
-          parserOptions: {
-            project: 'packages/ui-component/tsconfig.json',
-          },
-        },
         settings: {
           'import/resolver': {
             typescript: {
