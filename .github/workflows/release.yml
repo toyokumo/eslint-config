@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-permissions:
-  id-token: write  # Required for OIDC
-  contents: read
-
 jobs:
-  release:
+  release_npm:
+      permissions:
+        id-token: write  # Required for OIDC
+        contents: read
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
@@ -31,6 +30,21 @@ jobs:
 
         - run: npm publish
 
+  release_github:
+      permissions:
+        packages: write
+        attestations: write
+        contents: read
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+
+        - uses: pnpm/action-setup@v4
+          name: Install pnpm
+          id: pnpm-install
+          with:
+            version: 9
+
         - uses: actions/setup-node@v4
           with:
             node-version: "24.x"
@@ -38,6 +52,6 @@ jobs:
             cache-dependency-path: 'package.json'
             registry-url: https://npm.pkg.github.com
 
-        - run: pnpm publish --registry=https://npm.pkg.github.com
+        - run: npm publish --registry=https://npm.pkg.github.com
           env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
